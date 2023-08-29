@@ -90,7 +90,7 @@ export default function Home() {
 						</p>
 						<h4 className='text-xl py-4 text-teal-600'>Full Stack Development</h4>
 						<p className='py-1 text-gray-800 transition duration-500 dark:text-white'>
-							ReactJS is the most popular JavaScript framework and it's what the website you are seeing now is built with. Coupled with TailwindCSS and NextJS, the limit of what your design can look like is limitless.
+							ReactJS is the most popular JavaScript framework and it&apos;s what the website you are seeing now is built with. Coupled with TailwindCSS and NextJS, the limit of what your design can look like is limitless.
 						</p>
 					</div>
 				</div>
