@@ -23,7 +23,7 @@ export default function Home() {
 			<Head>
 				<title>Luke Chigges Portfolio</title>
 				<meta name="description" content="Luke Chigges Portfolio" />
-				<link rel="icon" href="/code.png" />
+				<link rel="icon" type="image/png" href="../../public/code.png" />
 			</Head>
 			<main className="transition duration-500 bg-white px-10 md:px-20 lg:px-40 dark:bg-slate-800">
 				<section className="min-h-screen">
@@ -81,7 +81,7 @@ export default function Home() {
 					</animated.div>
 				</section>
 				<section>
-					<div className="text-center py-10" style={{...headshotSpring}}>
+					<div className="text-center py-10">
 						<SlideInText>
 							<h3 className="text-5xl py-1 transition duration-500 dark:text-white">
 								Services I offer
