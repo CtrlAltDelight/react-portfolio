@@ -8,15 +8,15 @@ import headshot from "../../public/headshot.jpg";
 import design from "../../public/design.png";
 import consulting from "../../public/consulting.png";
 import code from "../../public/code.png";
-import web1 from "../../public/web1.png";
-import web2 from "../../public/web2.png";
-import web3 from "../../public/web3.png";
-import web4 from "../../public/web4.png";
-import web5 from "../../public/web5.png";
-import web6 from "../../public/web6.png";
+import { useSpring, useSprings, animated } from '@react-spring/web';
+import SlideInText from './SlideInText';
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(true);
+	const headshotSpring = useSpring({
+				from: { y: -100 },
+				to: { y: 0 },
+			})
 
 	return (
 		<div className={darkMode ? "dark" : ""}>
@@ -72,193 +72,199 @@ export default function Home() {
 							<AiFillMail className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white" />
 						</a>
 					</div>
-					<div className="max-w-lg mx-auto">
+					<animated.div className="max-w-lg mx-auto" style={{...headshotSpring}}>
 						<Image
 							className="h-auto max-w-full mx-auto rounded-full"
 							src={headshot}
 							alt="Me"
 						/>
-					</div>
+					</animated.div>
 				</section>
 				<section>
-					<div className="text-center py-10">
-						<h3 className="text-5xl py-1 transition duration-500 dark:text-white">
-							Services I offer
-						</h3>
-						<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
-							As a full stack developer, I will provide a{" "}
-							<span className="text-teal-500">beautiful</span> front end design
-							using cutting edge technologies like{" "}
-							<a
-								className="transition underline decoration-sky-500 hover:decoration-rose-500"
-								href="https://react.dev/"
-							>
-								React.js
-							</a>
-							.
-						</p>
-					</div>
-					<div className="lg:flex gap-10">
-						<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-							<Image
-								className="mx-auto"
-								src={consulting}
-								alt="Design"
-								width={100}
-								height={100}
-							/>
-							<h3 className="text-xl py-4 text-teal-600">Built How You Want</h3>
-							<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-								Always communicating, the agile development style I use allows
-								for quick bursts of development. New builds can be finished and
-								presented to you and you can tell me what additional features
-								and changes you want to see in the next build.
-							</p>
-							<h4 className="text-xl py-4 text-teal-600">Preview Sites</h4>
-							<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-								I will always have a preview site for you to see the progress of
-								your site. This allows you to see the progress and make changes
-								while I am developing!
-							</p>
-						</div>
-						<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-							<Image
-								className="mx-auto"
-								src={design}
-								alt="Design"
-								width={100}
-								height={100}
-							/>
-							<h3 className="text-xl py-4 text-teal-600">Beautiful Designs</h3>
-							<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-								Designs feel personal to your brand and image. Made to look
-								unique, stand out, and be memorable.
-							</p>
-							<h4 className="text-xl py-4 text-teal-600">
-								Optimized for Mobile
-							</h4>
-							<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-								Rest assured, your site will be responsive and look great on all
-								devices and screens.
-							</p>
-						</div>
-						<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-							<Image
-								className="mx-auto"
-								src={code}
-								alt="Design"
-								width={100}
-								height={100}
-							/>
-							<h3 className="text-xl py-4 text-teal-600">
-								Industry Grade Deployment
+					<div className="text-center py-10" style={{...headshotSpring}}>
+						<SlideInText>
+							<h3 className="text-5xl py-1 transition duration-500 dark:text-white">
+								Services I offer
 							</h3>
-							<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-								Your website will be version controlled using GitHub deployed
-								with Vercel. This allows for seamless deployments, meaning your
-								site will never be down. Version control means your site can
-								have multiple versions and a preview version to audit before
-								releasing to the main branch.
+							<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
+								As a full stack developer, I will provide a{" "}
+								<span className="text-teal-500">beautiful</span> front end design
+								using cutting edge technologies like{" "}
+								<a
+									className="transition underline decoration-sky-500 hover:decoration-rose-500"
+									href="https://react.dev/"
+								>
+									React.js
+								</a>
+								.
 							</p>
-							<h4 className="text-xl py-4 text-teal-600">
-								Full Stack Development
-							</h4>
-							<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-								ReactJS is the most popular JavaScript framework and it&apos;s
-								what the website you are seeing now is built with. Coupled with
-								TailwindCSS and NextJS, the limit of what your design can look
-								like is limitless.
-							</p>
-						</div>
+						</SlideInText>
 					</div>
+					<SlideInText>
+						<div className="lg:flex gap-10">
+							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+								<Image
+									className="mx-auto"
+									src={consulting}
+									alt="Design"
+									width={100}
+									height={100}
+								/>
+								<h3 className="text-xl py-4 text-teal-600">Built How You Want</h3>
+								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+									Always communicating, the agile development style I use allows
+									for quick bursts of development. New builds can be finished and
+									presented to you and you can tell me what additional features
+									and changes you want to see in the next build.
+								</p>
+								<h4 className="text-xl py-4 text-teal-600">Preview Sites</h4>
+								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+									I will always have a preview site for you to see the progress of
+									your site. This allows you to see the progress and make changes
+									while I am developing!
+								</p>
+							</div>
+							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+								<Image
+									className="mx-auto"
+									src={design}
+									alt="Design"
+									width={100}
+									height={100}
+								/>
+								<h3 className="text-xl py-4 text-teal-600">Beautiful Designs</h3>
+								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+									Designs feel personal to your brand and image. Made to look
+									unique, stand out, and be memorable.
+								</p>
+								<h4 className="text-xl py-4 text-teal-600">
+									Optimized for Mobile
+								</h4>
+								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+									Rest assured, your site will be responsive and look great on all
+									devices and screens.
+								</p>
+							</div>
+							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+								<Image
+									className="mx-auto"
+									src={code}
+									alt="Design"
+									width={100}
+									height={100}
+								/>
+								<h3 className="text-xl py-4 text-teal-600">
+									Industry Grade Deployment
+								</h3>
+								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+									Your website will be version controlled using GitHub deployed
+									with Vercel. This allows for seamless deployments, meaning your
+									site will never be down. Version control means your site can
+									have multiple versions and a preview version to audit before
+									releasing to the main branch.
+								</p>
+								<h4 className="text-xl py-4 text-teal-600">
+									Full Stack Development
+								</h4>
+								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+									ReactJS is the most popular JavaScript framework and it&apos;s
+									what the website you are seeing now is built with. Coupled with
+									TailwindCSS and NextJS, the limit of what your design can look
+									like is limitless.
+								</p>
+							</div>
+						</div>
+					</SlideInText>
 				</section>
 				<section>
-					<div className="text-center py-10">
-						<h3 className="text-5xl py-1 transition duration-500 dark:text-white">
-							Pricing
-						</h3>
-						<div className="lg:flex gap-10 justify-center">
-							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-								<h3 className="text-3xl py-4 text-teal-600">
-									Basic Package
-								</h3>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Ideal for individuals or small businesses looking for a professionally designed web presence.
-								</p>
-								<h4 className="text-xl py-4 text-teal-600">
-									<ul className="list-none text-sky-300">
-										<li>
-											Custom Web Design
-										</li>
-										<li>
-											React-based Development
-										</li>
-										<li>
-											Fast Deployment
-										</li>
-									</ul>
-								</h4>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Starts at $70 + Domain Cost
-								</p>
-							</div>
-							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-								<h3 className="text-3xl py-4 text-teal-600">
-									Premium Package
-								</h3>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Ideal for individuals or small businesses looking for a professionally designed web presence.
-								</p>
-								<h4 className="text-xl py-4 text-teal-600">
-									<ul className="list-none text-sky-300">
-										<li>
-											Custom Web Design
-										</li>
-										<li>
-											React-based Development
-										</li>
-										<li>
-											Fast Deployment
-										</li>
-										<li>
-											Domain Management
-										</li>
-										<li>
-											Custom Email
-										</li>
-										<li>
-											Multiple Pages
-										</li>
-									</ul>
-								</h4>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Starts at $120 + Domain Cost
-								</p>
-							</div>
-							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-								<h3 className="text-3xl py-4 text-teal-600">
-									Custom Package
-								</h3>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Not sure which package is right for you, or need something more specialized?<br />Contact me to discuss a tailored solution for your needs.
-								</p>
-								<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
-									<a href="mailto:webdev@chigges.com?subject=Let's make a website!">
-										<AiFillMail className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white" />
-									</a>
+					<SlideInText>
+						<div className="text-center justify-center py-10">
+							<h3 className="text-5xl py-1 transition duration-500 dark:text-white">
+								Pricing
+							</h3>
+							<div className="lg:flex gap-10 justify-center">
+								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+									<h3 className="text-3xl py-4 text-teal-600">
+										Basic Package
+									</h3>
+									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+										Ideal for individuals or small businesses looking for a professionally designed web presence.
+									</p>
+									<h4 className="text-xl py-4 text-teal-600">
+										<ul className="list-none text-sky-300">
+											<li>
+												Custom Web Design
+											</li>
+											<li>
+												React-based Development
+											</li>
+											<li>
+												Fast Deployment
+											</li>
+										</ul>
+									</h4>
+									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+										Starts at $70 + Domain Cost
+									</p>
 								</div>
-								<div className="text-lg text-center pb-20 text-gray-800 transition duration-500 dark:text-white">
-									<a 
-										href="mailto:webdev@chigges.com?subject=Let's make a website!"
-										className="transition text-cyan-500 hover:text-cyan-300"
-									>
-									
-										webdev@chigges.com
-									</a>
+								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+									<h3 className="text-3xl py-4 text-teal-600">
+										Premium Package
+									</h3>
+									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+										Ideal for individuals or small businesses looking for a professionally designed web presence.
+									</p>
+									<h4 className="text-xl py-4 text-teal-600">
+										<ul className="list-none text-sky-300">
+											<li>
+												Custom Web Design
+											</li>
+											<li>
+												React-based Development
+											</li>
+											<li>
+												Fast Deployment
+											</li>
+											<li>
+												Domain Management
+											</li>
+											<li>
+												Custom Email
+											</li>
+											<li>
+												Multiple Pages
+											</li>
+										</ul>
+									</h4>
+									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+										Starts at $120 + Domain Cost
+									</p>
+								</div>
+								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+									<h3 className="text-3xl py-4 text-teal-600">
+										Custom Package
+									</h3>
+									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
+										Not sure which package is right for you, or need something more specialized?<br />Contact me to discuss a tailored solution for your needs.
+									</p>
+									<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
+										<a href="mailto:webdev@chigges.com?subject=Let's make a website!">
+											<AiFillMail className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white" />
+										</a>
+									</div>
+									<div className="text-lg text-center pb-20 text-gray-800 transition duration-500 dark:text-white">
+										<a 
+											href="mailto:webdev@chigges.com?subject=Let's make a website!"
+											className="transition text-cyan-500 hover:text-cyan-300"
+										>
+										
+											webdev@chigges.com
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</SlideInText>
 				</section>
 				<section>
 					<div className="text-center">
