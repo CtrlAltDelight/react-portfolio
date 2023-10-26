@@ -65,14 +65,14 @@ export default function Home() {
 						</h2>
 						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
 							Alright, I am someone who studied at Purdue University<br />
-							and have a fancy little piece of paper that says "Computer Engineer" on it.<br /><br />
+							and have a fancy little piece of paper that says &quot;Computer Engineer&quot; on it.<br /><br />
 							Besides that, web development is a hobby of mine and I know my way around a CNAME certificate.<br />
 						</h3>
 						<h2 className="text-5xl mt-20 py-2 text-teal-600 font-medium md:text-6xl">
 							Why is it so damn expensive? Isn&apos;t making a site easy?
 						</h2>
 						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							A man's gotta eat.<br />
+							A man&apos;s gotta eat.<br />
 							I am not trying to get rich, but I am trying to make a living.<br />
 							While it seems like a lot of money, it takes a lot of time and care to make a site.<br />
 							The profit margins here are not very large. This is a good deal.<br /><br />
