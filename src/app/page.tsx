@@ -8,7 +8,7 @@ import headshot from "../../public/headshot.jpg";
 import design from "../../public/design.png";
 import consulting from "../../public/consulting.png";
 import code from "../../public/code.png";
-import { useSpring, useSprings, animated } from '@react-spring/web';
+import { useSpring, animated } from '@react-spring/web';
 import SlideInText from './SlideInText';
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
 	const headshotSpring = useSpring({
 				from: { y: -100 },
 				to: { y: 0 },
+				delay: 200,
 			})
 
 	return (
