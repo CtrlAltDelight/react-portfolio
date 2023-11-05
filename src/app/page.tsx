@@ -16,7 +16,7 @@ export default function Home() {
 	const headshotSpring = useSpring({
 				from: { y: -100 },
 				to: { y: 0 },
-				delay: 200,
+				delay: 500,
 			})
 
 	return (
