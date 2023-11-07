@@ -28,9 +28,9 @@ export default function Home() {
 			<main className="transition duration-500 bg-white px-10 md:px-20 lg:px-40 dark:bg-slate-800">
 				<section className="min-h-screen">
 					<nav className="py-10 mb-12 flex justify-between">
-						<h1 className="text-xl font-mono transition duration-500 dark:text-white">
+						<h2 className="text-xl font-mono transition duration-500 dark:text-white">
 							Luke Chigges
-						</h1>
+						</h2>
 						<ul className="flex items-center">
 							<li>
 								<BsFillMoonStarsFill
@@ -40,8 +40,8 @@ export default function Home() {
 							</li>
 							<li>
 								<a
-									className="transition hover:bg-blue-600 duration-500 bg-teal-600
-									text-white px-4 py-2 rounded-md ml-8"
+									className="transition hover:bg-blue-600 duration-500 bg-teal-400
+									text-white dark:text-slate-800 px-4 py-2 rounded-md ml-8"
 									href="/"
 								>
 									Back to homepage
@@ -51,7 +51,10 @@ export default function Home() {
 					</nav>
 
 					<div className="text-center p-10">
-						<h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+						<h1 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
+							Commonly asked questions
+						</h1>
+						<h2 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
 							How do you know I can build a website?
 						</h2>
 						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
@@ -60,30 +63,46 @@ export default function Home() {
 						<p className="leading-8 text-gray-800 md:text-xl max-w-xl mx-auto transition duration-500 dark:text-white">
 							Stunning, isn&apos;t it?
 						</p>
-						<h2 className="text-5xl mt-20 py-2 text-teal-600 font-medium md:text-6xl">
+						<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
 							No seriously, who even are you?
 						</h2>
 						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							Alright, I study at Purdue University<br />
-							and am getting a piece of paper that says &quot;Computer Engineer&quot; on it.<br /><br />
+							Alright, I study at Purdue University
+							<br />
+							and am getting a piece of paper that says &quot;Computer
+							Engineer&quot; on it.
+							<br />
+							<br />
 							Besides that, web development is a hobby of mine.
 						</h3>
-						<h2 className="text-5xl mt-20 py-2 text-teal-600 font-medium md:text-6xl">
+						<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
 							Why is it so damn expensive? Isn&apos;t making a site easy?
 						</h2>
 						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							A man&apos;s gotta eat.<br />
-							I am not trying to get rich, but I am trying to make a living.<br />
-							While it seems like a lot of money, it takes a lot of time and care to make a site.<br />
-							The profit margins here are not very large. This is a good deal.<br /><br />
+							A man&apos;s gotta eat.
+							<br />
+							I am not trying to get rich, but I am trying to make a living.
+							<br />
+							While it seems like a lot of money, it takes a lot of time and
+							care to make a site.
+							<br />
+							The profit margins here are not very large. This is a good deal.
+							<br />
+							<br />
 						</h3>
-						<h2 className="text-5xl mt-20 py-2 text-teal-600 font-medium md:text-6xl">
+						<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
 							What sets you apart besides your good looks?
 						</h2>
 						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							Ah, shucks. You&apos;re too kind.<br /><br />
-							Well, I am a computer engineer by trade, so I know my way around a computer and networks.<br />
-							I work very personally with my clients. This results in a highly personalized site.<br />
+							Ah, shucks. You&apos;re too kind.
+							<br />
+							<br />
+							Well, I am a computer engineer by trade, so I know my way around a
+							computer and networks.
+							<br />
+							I work very personally with my clients. This results in a highly
+							personalized site.
+							<br />
 						</h3>
 					</div>
 				</section>
