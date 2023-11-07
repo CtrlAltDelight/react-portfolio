@@ -260,7 +260,10 @@ export default function Home() {
 										Contact me to discuss a tailored solution for your needs.
 									</p>
 									<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
-										<a href="mailto:webdev@chigges.com?subject=Let's make a website!">
+										<a
+											aria-label="A link to send Luke an email"
+											href="mailto:webdev@chigges.com?subject=Let's make a website!"
+										>
 											<AiFillMail
 												role="none"
 												className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
