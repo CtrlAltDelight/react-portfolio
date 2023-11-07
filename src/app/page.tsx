@@ -1,12 +1,7 @@
 "use client"; // Tells NextJS that this component can use the 'useState' hook
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import {
-	AiFillGithub,
-	AiFillLinkedin,
-	AiFillYoutube,
-	AiFillMail,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { useState } from "react";
 import Image from "next/image";
 import headshot from "../../public/headshot.jpg";
@@ -27,8 +22,8 @@ export default function Home() {
 	return (
 		<div className={darkMode ? "dark" : ""}>
 			<Head>
-				<title>Luke Chigges Portfolio</title>
-				<meta name="description" content="Luke Chigges Portfolio" />
+				<title>Chigges Web Design</title>
+				<meta name="description" content="Chigges Web Design and Development" />
 				<link rel="icon" type="image/png" href="../../public/code.png" />
 			</Head>
 			<main className="transition duration-500 bg-white px-10 md:px-20 lg:px-40 dark:bg-slate-800">
@@ -46,7 +41,7 @@ export default function Home() {
 							</li>
 							<li>
 								<a
-									className="transition hover:bg-blue-600 duration-500 bg-teal-600
+									className="transition hover:bg-blue-600 duration-500 bg-teal-400
 									text-white px-4 py-2 rounded-md ml-8"
 									href="/resume"
 								>
@@ -57,7 +52,7 @@ export default function Home() {
 					</nav>
 
 					<div className="text-center p-10">
-						<h1 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+						<h1 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
 							Luke Chigges
 						</h1>
 						<h2 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
@@ -106,7 +101,7 @@ export default function Home() {
 							</h2>
 							<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
 								As a full stack developer, I will provide a{" "}
-								<span className="text-teal-500">beautiful</span> front end
+								<span className="text-teal-400">beautiful</span> front end
 								design using cutting edge technologies like{" "}
 								<a
 									className="transition underline decoration-sky-500 hover:decoration-rose-500"
@@ -128,7 +123,7 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-xl py-4 text-teal-600">
+								<h3 className="text-xl py-4 text-teal-400">
 									Built How You Want
 								</h3>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
@@ -137,7 +132,7 @@ export default function Home() {
 									and presented to you and you can tell me what additional
 									features and changes you want to see in the next build.
 								</p>
-								<h4 className="text-xl py-4 text-teal-600">Preview Sites</h4>
+								<h4 className="text-xl py-4 text-teal-400">Preview Sites</h4>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 									I will always have a preview site for you to see the progress
 									of your site. This allows you to see the progress and make
@@ -152,14 +147,14 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-xl py-4 text-teal-600">
+								<h3 className="text-xl py-4 text-teal-400">
 									Beautiful Designs
 								</h3>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 									Designs feel personal to your brand and image. Made to look
 									unique, stand out, and be memorable.
 								</p>
-								<h4 className="text-xl py-4 text-teal-600">
+								<h4 className="text-xl py-4 text-teal-400">
 									Optimized for Mobile
 								</h4>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
@@ -175,7 +170,7 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-xl py-4 text-teal-600">
+								<h3 className="text-xl py-4 text-teal-400">
 									Industry Grade Deployment
 								</h3>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
@@ -185,7 +180,7 @@ export default function Home() {
 									can have multiple versions and a preview version to audit
 									before releasing to the main branch.
 								</p>
-								<h4 className="text-xl py-4 text-teal-600">
+								<h4 className="text-xl py-4 text-teal-400">
 									Full Stack Development
 								</h4>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
@@ -206,12 +201,12 @@ export default function Home() {
 							</h2>
 							<div className="lg:flex gap-10 justify-center">
 								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-									<h3 className="text-3xl py-4 text-teal-600">Basic Package</h3>
+									<h3 className="text-3xl py-4 text-teal-400">Basic Package</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 										Ideal for individuals or small businesses looking for a
 										professionally designed web presence.
 									</p>
-									<h4 className="text-xl py-4 text-teal-600">
+									<h4 className="text-xl py-4 text-teal-400">
 										<ul className="list-none text-sky-300">
 											<li>Custom Web Design</li>
 											<li>React-based Development</li>
@@ -223,14 +218,14 @@ export default function Home() {
 									</p>
 								</div>
 								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-									<h3 className="text-3xl py-4 text-teal-600">
+									<h3 className="text-3xl py-4 text-teal-400">
 										Premium Package
 									</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 										Ideal for individuals or small businesses looking for a
 										professionally designed web presence.
 									</p>
-									<h4 className="text-xl py-4 text-teal-600">
+									<h4 className="text-xl py-4 text-teal-400">
 										<ul className="list-none text-sky-300">
 											<li>Custom Web Design</li>
 											<li>React-based Development</li>
@@ -245,7 +240,7 @@ export default function Home() {
 									</p>
 								</div>
 								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
-									<h3 className="text-3xl py-4 text-teal-600">
+									<h3 className="text-3xl py-4 text-teal-400">
 										Custom Package
 									</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
