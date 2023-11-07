@@ -41,6 +41,7 @@ export default function Home() {
 							</li>
 							<li>
 								<a
+									aria-label="Link to the resume page of this site"
 									className="transition hover:bg-blue-600 duration-500 bg-teal-400
 									text-white px-4 py-2 rounded-md ml-8"
 									href="/resume"
@@ -63,19 +64,28 @@ export default function Home() {
 						</p>
 					</div>
 					<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
-						<a href="https://github.com/CtrlAltDelight/">
+						<a
+							aria-label="A link to Luke's github.com profile"
+							href="https://github.com/CtrlAltDelight/"
+						>
 							<AiFillGithub
 								role="none"
 								className="transition hover:scale-110 hover:fill-teal-500 text-gray-600 dark:text-white"
 							/>
 						</a>
-						<a href="https://www.linkedin.com/in/luke-chigges/">
+						<a
+							aria-label="A link to Luke's linkedin.com profile"
+							href="https://www.linkedin.com/in/luke-chigges/"
+						>
 							<AiFillLinkedin
 								role="none"
 								className="transition hover:scale-110 hover:fill-blue-500 text-gray-600 dark:text-white"
 							/>
 						</a>
-						<a href="mailto:webdev@chigges.com?subject=Let's make a website!">
+						<a
+							aria-label="A link to send Luke an email"
+							href="mailto:webdev@chigges.com?subject=Let's make a website!"
+						>
 							<AiFillMail
 								role="none"
 								className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
