@@ -69,13 +69,22 @@ export default function Home() {
 					</div>
 					<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
 						<a href="https://github.com/CtrlAltDelight/">
-							<AiFillGithub className="transition hover:scale-110 hover:fill-teal-500 text-gray-600 dark:text-white" />
+							<AiFillGithub
+								role="none"
+								className="transition hover:scale-110 hover:fill-teal-500 text-gray-600 dark:text-white"
+							/>
 						</a>
 						<a href="https://www.linkedin.com/in/luke-chigges/">
-							<AiFillLinkedin className="transition hover:scale-110 hover:fill-blue-500 text-gray-600 dark:text-white" />
+							<AiFillLinkedin
+								role="none"
+								className="transition hover:scale-110 hover:fill-blue-500 text-gray-600 dark:text-white"
+							/>
 						</a>
 						<a href="mailto:webdev@chigges.com?subject=Let's make a website!">
-							<AiFillMail className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white" />
+							<AiFillMail
+								role="none"
+								className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
+							/>
 						</a>
 					</div>
 					<animated.div
@@ -247,7 +256,10 @@ export default function Home() {
 									</p>
 									<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
 										<a href="mailto:webdev@chigges.com?subject=Let's make a website!">
-											<AiFillMail className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white" />
+											<AiFillMail
+												role="none"
+												className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
+											/>
 										</a>
 									</div>
 									<div className="text-lg text-center pb-20 text-gray-800 transition duration-500 dark:text-white">
