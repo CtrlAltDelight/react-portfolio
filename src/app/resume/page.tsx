@@ -45,45 +45,52 @@ export default function Home() {
 					</nav>
 
 					<div className="text-center p-10">
-						<h1 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
+						<h1 tabIndex={0} className="text-5xl pb-16 text-teal-400 font-medium md:text-6xl">
 							Commonly asked questions
 						</h1>
-						<h2 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
-							How do you know I can build a website?
-						</h2>
-						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							You&apos;re on one of mine right now.
-						</h3>
-						<p className="leading-8 text-gray-800 md:text-xl max-w-xl mx-auto transition duration-500 dark:text-white">
-							Stunning, isn&apos;t it?
-						</p>
-						<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
-							No seriously, who even are you?
-						</h2>
-						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							Alright, I study at Purdue University
-							<br />
-							and am getting a piece of paper that says &quot;Computer
-							Engineer&quot; on it.
-							<br />
-							<br />
-							Besides that, web development is a hobby of mine.
-						</h3>
-						<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
-							Why is it so damn expensive? Isn&apos;t making a site easy?
-						</h2>
-						<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							A man&apos;s gotta eat.
-							<br />
-							I am not trying to get rich, but I am trying to make a living.
-							<br />
-							While it seems like a lot of money, it takes a lot of time and
-							care to make a site.
-							<br />
-							The profit margins here are not very large. This is a good deal.
-							<br />
-							<br />
-						</h3>
+						<div tabIndex={0}>
+							<h2 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
+								How do you know I can build a website?
+							</h2>
+							<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
+								You&apos;re on one of mine right now.
+							</h3>
+							<p className="leading-8 text-gray-800 md:text-xl max-w-xl mx-auto transition duration-500 dark:text-white">
+								Stunning, isn&apos;t it?
+							</p>
+						</div>
+						<div tabIndex={0}>
+							<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
+								No seriously, who even are you?
+							</h2>
+							<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
+								Alright, I study at Purdue University
+								<br />
+								and am getting a piece of paper that says &quot;Computer
+								Engineer&quot; on it.
+								<br />
+								<br />
+								Besides that, web development is a hobby of mine.
+							</h3>
+						</div>
+						<div tabIndex={0}>
+							<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
+								Why is it so damn expensive? Isn&apos;t making a site easy?
+							</h2>
+							<h3 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
+								A man&apos;s gotta eat.
+								<br />
+								I am not trying to get rich, but I am trying to make a living.
+								<br />
+								While it seems like a lot of money, it takes a lot of time and
+								care to make a site.
+								<br />
+								The profit margins here are not very large. This is a good deal.
+								<br />
+								<br />
+							</h3>
+						</div>
+						<div tabIndex={0}>
 						<h2 className="text-5xl mt-20 py-2 text-teal-400 font-medium md:text-6xl">
 							What sets you apart besides your good looks?
 						</h2>
@@ -98,11 +105,12 @@ export default function Home() {
 							personalized site.
 							<br />
 						</h3>
+						</div>
 					</div>
 				</section>
 				<section>
 					<div className="text-center">
-						<h3 className="justify-between align-center text-3xl py-1 transition duration-500 dark:text-white">
+						<h3 tabIndex={0} className="justify-between align-center text-3xl py-1 transition duration-500 dark:text-white">
 							Contact
 						</h3>
 						<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
