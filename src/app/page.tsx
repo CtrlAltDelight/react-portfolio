@@ -35,6 +35,7 @@ export default function Home() {
 						<ul className="flex items-center">
 							<li>
 								<BsFillMoonStarsFill
+									tabIndex={0}
 									onClick={() => setDarkMode(!darkMode)}
 									className="transition ease-in-out hover:text-yellow-500 dark:hover:text-yellow-500 hover:scale-110 cursor-pointer text-2xl dark:text-white"
 								/>
@@ -42,11 +43,13 @@ export default function Home() {
 							<li>
 								<a
 									aria-label="Link to the resume page of this site"
+									target="_blank"
+									rel="noopener noreferrer"
 									className="transition hover:bg-blue-600 duration-500 bg-teal-400
-									text-white px-4 py-2 rounded-md ml-8"
+									text-white dark:text-slate-800 px-4 py-2 rounded-md ml-8"
 									href="/resume"
 								>
-									Resume
+									<span tabIndex={0}>Resume</span>
 								</a>
 							</li>
 						</ul>
@@ -65,19 +68,25 @@ export default function Home() {
 					</div>
 					<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
 						<a
+							target="_blank"
+							rel="noopener noreferrer"
 							aria-label="A link to Luke's github.com profile"
 							href="https://github.com/CtrlAltDelight/"
 						>
 							<AiFillGithub
+								tabIndex={0}
 								role="none"
 								className="transition hover:scale-110 hover:fill-teal-500 text-gray-600 dark:text-white"
 							/>
 						</a>
 						<a
+							target="_blank"
+							rel="noopener"
 							aria-label="A link to Luke's linkedin.com profile"
 							href="https://www.linkedin.com/in/luke-chigges/"
 						>
 							<AiFillLinkedin
+								tabIndex={0}
 								role="none"
 								className="transition hover:scale-110 hover:fill-blue-500 text-gray-600 dark:text-white"
 							/>
@@ -87,6 +96,7 @@ export default function Home() {
 							href="mailto:webdev@chigges.com?subject=Let's make a website!"
 						>
 							<AiFillMail
+								tabIndex={0}
 								role="none"
 								className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
 							/>
@@ -106,7 +116,10 @@ export default function Home() {
 				<section>
 					<div className="text-center py-10">
 						<SlideInText>
-							<h2 className="text-5xl py-1 transition duration-500 dark:text-white">
+							<h2
+								tabIndex={0}
+								className="text-5xl py-1 transition duration-500 dark:text-white"
+							>
 								Services I offer
 							</h2>
 							<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
@@ -114,6 +127,8 @@ export default function Home() {
 								<span className="text-teal-400">beautiful</span> front end
 								design using cutting edge technologies like{" "}
 								<a
+									target="_blank"
+									rel="noopener noreferrer"
 									className="transition underline decoration-sky-500 hover:decoration-rose-500"
 									href="https://react.dev/"
 								>
@@ -125,7 +140,10 @@ export default function Home() {
 					</div>
 					<SlideInText>
 						<div className="lg:flex gap-10">
-							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+							<div
+								tabIndex={0}
+								className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+							>
 								<Image
 									className="mx-auto"
 									src={consulting}
@@ -149,7 +167,10 @@ export default function Home() {
 									changes while I am developing!
 								</p>
 							</div>
-							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+							<div
+								tabIndex={0}
+								className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+							>
 								<Image
 									className="mx-auto"
 									src={design}
@@ -172,7 +193,10 @@ export default function Home() {
 									all devices and screens.
 								</p>
 							</div>
-							<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+							<div
+								tabIndex={0}
+								className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+							>
 								<Image
 									className="mx-auto"
 									src={code}
@@ -206,11 +230,17 @@ export default function Home() {
 				<section>
 					<SlideInText>
 						<div className="text-center justify-center py-10">
-							<h2 className="text-5xl py-1 transition duration-500 dark:text-white">
+							<h2
+								tabIndex={0}
+								className="text-5xl py-1 transition duration-500 dark:text-white"
+							>
 								Pricing
 							</h2>
 							<div className="lg:flex gap-10 justify-center">
-								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+								<div
+									tabIndex={0}
+									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+								>
 									<h3 className="text-3xl py-4 text-teal-400">Basic Package</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 										Ideal for individuals or small businesses looking for a
@@ -227,7 +257,10 @@ export default function Home() {
 										Starts at $70 + Domain Cost
 									</p>
 								</div>
-								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+								<div
+									tabIndex={0}
+									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+								>
 									<h3 className="text-3xl py-4 text-teal-400">
 										Premium Package
 									</h3>
@@ -249,7 +282,10 @@ export default function Home() {
 										Starts at $120 + Domain Cost
 									</p>
 								</div>
-								<div className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50">
+								<div
+									tabIndex={0}
+									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+								>
 									<h3 className="text-3xl py-4 text-teal-400">
 										Custom Package
 									</h3>
@@ -265,6 +301,7 @@ export default function Home() {
 											href="mailto:webdev@chigges.com?subject=Let's make a website!"
 										>
 											<AiFillMail
+												tabIndex={0}
 												role="none"
 												className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
 											/>
@@ -285,7 +322,10 @@ export default function Home() {
 				</section>
 				<section>
 					<div className="text-center">
-						<h3 className="justify-between align-center text-3xl py-1 transition duration-500 dark:text-white">
+						<h3
+							tabIndex={0}
+							className="justify-between align-center text-3xl py-1 transition duration-500 dark:text-white"
+						>
 							Contact
 						</h3>
 						<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
@@ -297,7 +337,7 @@ export default function Home() {
 							className="transition text-cyan-500 hover:text-cyan-300"
 							href="mailto:webdev@chigges.com?subject=Let's make a website!"
 						>
-							webdev@chigges.com
+							<p tabIndex={0}>webdev@chigges.com</p>
 						</a>
 					</div>
 				</section>
