@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import headshot from "../../public/headshot.jpg";
 import design from "../../public/design.png";
@@ -14,6 +14,22 @@ import HiddenSkipLink from "./HiddenSkipLink";
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(true);
+
+	useEffect(() => {
+		const params = new URLSearchParams(window.location.search);
+		const darkModeValue = params.get('dark'); // This would be 'true' or 'false' as a string
+
+		if(darkModeValue === null) {
+			return;
+		}
+
+		// Convert the 'true' or 'false' string to a Boolean value
+		// Note: This will set stateVar to true for 'true', and false for 'false' or any other string
+		const isDarkMode = darkModeValue === 'true';
+		setDarkMode(isDarkMode);
+	}, []);
+
+
 
 	const headshotSpring = useSpring({
 		from: { y: -100 },
