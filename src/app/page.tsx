@@ -78,7 +78,7 @@ export default function Home() {
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							aria-label="A link to Luke's github.com profile"
+							aria-label="Open a link to Luke's github.com profile in a new tab"
 							href="https://github.com/CtrlAltDelight/"
 						>
 							<AiFillGithub
@@ -89,7 +89,7 @@ export default function Home() {
 						<a
 							target="_blank"
 							rel="noopener"
-							aria-label="A link to Luke's linkedin.com profile"
+							aria-label="Open a link to Luke's linkedin.com profile in a new tab"
 							href="https://www.linkedin.com/in/luke-chigges/"
 						>
 							<AiFillLinkedin
@@ -132,6 +132,7 @@ export default function Home() {
 									<span className="text-teal-400">beautiful</span> front end
 									design using cutting edge technologies like{" "}
 									<a
+										aria-label="A link to open react.dev in a new tab"
 										target="_blank"
 										rel="noopener noreferrer"
 										className="transition underline decoration-sky-500 hover:decoration-rose-500"
