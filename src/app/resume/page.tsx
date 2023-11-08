@@ -4,16 +4,6 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { useState } from "react";
 import Image from "next/image";
-import headshot from "../../../public/headshot.jpg";
-import design from "../../../public/design.png";
-import consulting from "../../../public/consulting.png";
-import code from "../../../public/code.png";
-import web1 from "../../../public/web1.png";
-import web2 from "../../../public/web2.png";
-import web3 from "../../../public/web3.png";
-import web4 from "../../../public/web4.png";
-import web5 from "../../../public/web5.png";
-import web6 from "../../../public/web6.png";
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(true);
@@ -34,7 +24,11 @@ export default function Home() {
 						<ul className="flex items-center">
 							<li>
 								<BsFillMoonStarsFill
+									tabIndex={0}
 									onClick={() => setDarkMode(!darkMode)}
+									onKeyDown={(e) => {
+										if(e.key === "Enter" || e.key === "Space") setDarkMode(!darkMode);
+									}}
 									className="transition ease-in-out hover:text-yellow-500 dark:hover:text-yellow-500 hover:scale-110 cursor-pointer text-2xl dark:text-white"
 								/>
 							</li>
