@@ -10,9 +10,11 @@ import consulting from "../../public/consulting.png";
 import code from "../../public/code.png";
 import { useSpring, animated } from "@react-spring/web";
 import SlideInText from "./SlideInText";
+import HiddenSkipLink from "./HiddenSkipLink";
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(true);
+
 	const headshotSpring = useSpring({
 		from: { y: -100 },
 		to: { y: 0 },
@@ -37,23 +39,29 @@ export default function Home() {
 								<BsFillMoonStarsFill
 									tabIndex={0}
 									onClick={() => setDarkMode(!darkMode)}
+									onKeyDown={(e) => {
+										if(e.key === "Enter" || e.key === "Space") setDarkMode(!darkMode);
+									}}
 									className="transition ease-in-out hover:text-yellow-500 dark:hover:text-yellow-500 hover:scale-110 cursor-pointer text-2xl dark:text-white"
 								/>
 							</li>
 							<li>
 								<a
 									aria-label="Link to the resume page of this site"
-									target="_blank"
-									rel="noopener noreferrer"
 									className="transition hover:bg-blue-600 duration-500 bg-teal-400
 									text-white dark:text-slate-800 px-4 py-2 rounded-md ml-8"
 									href="/resume"
 								>
-									<span tabIndex={0}>Resume</span>
+									<span>Resume</span>
 								</a>
 							</li>
 						</ul>
 					</nav>
+					<div className="flex flex-row">
+						<HiddenSkipLink text="Skip to description" linkTo="#description" />
+						<HiddenSkipLink text="Skip to pricing" linkTo="#pricing" />
+						<HiddenSkipLink text="Skip to contact" linkTo="#contact" />
+					</div>
 
 					<div className="text-center p-10">
 						<h1 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
@@ -74,7 +82,6 @@ export default function Home() {
 							href="https://github.com/CtrlAltDelight/"
 						>
 							<AiFillGithub
-								tabIndex={0}
 								role="none"
 								className="transition hover:scale-110 hover:fill-teal-500 text-gray-600 dark:text-white"
 							/>
@@ -86,7 +93,6 @@ export default function Home() {
 							href="https://www.linkedin.com/in/luke-chigges/"
 						>
 							<AiFillLinkedin
-								tabIndex={0}
 								role="none"
 								className="transition hover:scale-110 hover:fill-blue-500 text-gray-600 dark:text-white"
 							/>
@@ -96,7 +102,6 @@ export default function Home() {
 							href="mailto:webdev@chigges.com?subject=Let's make a website!"
 						>
 							<AiFillMail
-								tabIndex={0}
 								role="none"
 								className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
 							/>
@@ -113,32 +118,30 @@ export default function Home() {
 						/>
 					</animated.div>
 				</section>
-				<section>
-					<div className="text-center py-10">
-						<SlideInText>
-							<h2
-								tabIndex={0}
-								className="text-5xl py-1 transition duration-500 dark:text-white"
-							>
-								Services I offer
-							</h2>
-							<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
-								As a full stack developer, I will provide a{" "}
-								<span className="text-teal-400">beautiful</span> front end
-								design using cutting edge technologies like{" "}
-								<a
-									target="_blank"
-									rel="noopener noreferrer"
-									className="transition underline decoration-sky-500 hover:decoration-rose-500"
-									href="https://react.dev/"
-								>
-									React.js
-								</a>
-								.
-							</p>
-						</SlideInText>
-					</div>
+				<section id="description">
 					<SlideInText>
+						<div className="text-center py-10">
+								<h2
+									tabIndex={0}
+									className="text-5xl py-1 transition duration-500 dark:text-white"
+								>
+									Services I offer
+								</h2>
+								<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
+									As a full stack developer, I will provide a{" "}
+									<span className="text-teal-400">beautiful</span> front end
+									design using cutting edge technologies like{" "}
+									<a
+										target="_blank"
+										rel="noopener noreferrer"
+										className="transition underline decoration-sky-500 hover:decoration-rose-500"
+										href="https://react.dev/"
+									>
+										React.js
+									</a>
+									.
+								</p>
+						</div>
 						<div className="lg:flex gap-10">
 							<div
 								tabIndex={0}
@@ -227,7 +230,7 @@ export default function Home() {
 						</div>
 					</SlideInText>
 				</section>
-				<section>
+				<section id="pricing">
 					<SlideInText>
 						<div className="text-center justify-center py-10">
 							<h2
@@ -301,7 +304,6 @@ export default function Home() {
 											href="mailto:webdev@chigges.com?subject=Let's make a website!"
 										>
 											<AiFillMail
-												tabIndex={0}
 												role="none"
 												className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
 											/>
@@ -320,7 +322,7 @@ export default function Home() {
 						</div>
 					</SlideInText>
 				</section>
-				<section>
+				<section id="contact">
 					<div className="text-center">
 						<h3
 							tabIndex={0}
@@ -337,7 +339,7 @@ export default function Home() {
 							className="transition text-cyan-500 hover:text-cyan-300"
 							href="mailto:webdev@chigges.com?subject=Let's make a website!"
 						>
-							<p tabIndex={0}>webdev@chigges.com</p>
+							<p>webdev@chigges.com</p>
 						</a>
 					</div>
 				</section>
