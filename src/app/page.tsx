@@ -273,9 +273,6 @@ export default function Home() {
 											<li>Fast Deployment</li>
 										</ul>
 									</h4>
-									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-										Starts at $70 + Domain Cost
-									</p>
 								</div>
 								<div
 									tabIndex={0}
@@ -298,9 +295,6 @@ export default function Home() {
 											<li>Multiple Pages</li>
 										</ul>
 									</h4>
-									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-										Starts at $120 + Domain Cost
-									</p>
 								</div>
 								<div
 									tabIndex={0}
