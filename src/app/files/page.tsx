@@ -57,7 +57,7 @@ export default function Home() {
 								Word Doc Replacer
 							</h2>
 							<a
-								href="/public/word_doc_replacer.zip"
+								href="../../../public/word_doc_replacer.zip"
 								download
 								className="text-blue-400"
 							>
