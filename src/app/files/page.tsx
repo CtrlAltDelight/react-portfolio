@@ -56,7 +56,11 @@ export default function Home() {
 							<h2 className="text-xl py-2 text-teal-400 font-medium">
 								Word Doc Replacer
 							</h2>
-							<a href="/word_doc_replacer.zip" download className="text-blue-400">
+							<a
+								href="/word_doc_replacer.zip"
+								download
+								className="text-blue-400 hover:text-blue-300 hover:underline"
+							>
 								Download
 							</a>
 						</div>
