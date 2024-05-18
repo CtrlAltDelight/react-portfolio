@@ -149,10 +149,10 @@ export default function Home() {
 								.
 							</p>
 						</div>
-						<div className="lg:flex gap-10">
+						<div className="xl:flex xl:columns-3 space-between gap-10">
 							<div
 								tabIndex={0}
-								className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+								className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
 							>
 								<Image
 									className="mx-auto"
@@ -177,7 +177,7 @@ export default function Home() {
 							</div>
 							<div
 								tabIndex={0}
-								className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+								className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50 width-"
 							>
 								<Image
 									className="mx-auto"
@@ -199,7 +199,7 @@ export default function Home() {
 							</div>
 							<div
 								tabIndex={0}
-								className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+								className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
 							>
 								<Image
 									className="mx-auto"
@@ -240,10 +240,10 @@ export default function Home() {
 							>
 								Pricing
 							</h2>
-							<div className="lg:flex gap-10 justify-center">
+							<div className="xl:flex xl:columns-3 space-between gap-10">
 								<div
 									tabIndex={0}
-									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+									className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
 								>
 									<h3 className="text-3xl py-4 text-teal-400">Basic Package</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
@@ -260,7 +260,7 @@ export default function Home() {
 								</div>
 								<div
 									tabIndex={0}
-									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+									className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
 								>
 									<h3 className="text-3xl py-4 text-teal-400">Premium Package</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
@@ -280,7 +280,7 @@ export default function Home() {
 								</div>
 								<div
 									tabIndex={0}
-									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+									className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
 								>
 									<h3 className="text-3xl py-4 text-teal-400">Custom Package</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
