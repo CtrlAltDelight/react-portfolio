@@ -11,25 +11,24 @@ import code from "../../public/code.png";
 import { useSpring, animated } from "@react-spring/web";
 import SlideInText from "./SlideInText";
 import HiddenSkipLink from "./HiddenSkipLink";
+import DownloadResumeButton from "./DownloadResumeButton";
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(true);
 
 	useEffect(() => {
 		const params = new URLSearchParams(window.location.search);
-		const darkModeValue = params.get('dark'); // This would be 'true' or 'false' as a string
+		const darkModeValue = params.get("dark"); // This would be 'true' or 'false' as a string
 
-		if(darkModeValue === null) {
+		if (darkModeValue === null) {
 			return;
 		}
 
 		// Convert the 'true' or 'false' string to a Boolean value
 		// Note: This will set stateVar to true for 'true', and false for 'false' or any other string
-		const isDarkMode = darkModeValue === 'true';
+		const isDarkMode = darkModeValue === "true";
 		setDarkMode(isDarkMode);
 	}, []);
-
-
 
 	const headshotSpring = useSpring({
 		from: { y: -100 },
@@ -56,20 +55,14 @@ export default function Home() {
 									tabIndex={0}
 									onClick={() => setDarkMode(!darkMode)}
 									onKeyDown={(e) => {
-										if(e.key === "Enter" || e.key === "Space") setDarkMode(!darkMode);
+										if (e.key === "Enter" || e.key === "Space")
+											setDarkMode(!darkMode);
 									}}
 									className="transition ease-in-out hover:text-yellow-500 dark:hover:text-yellow-500 hover:scale-110 cursor-pointer text-2xl dark:text-white"
 								/>
 							</li>
 							<li>
-								<a
-									aria-label="Link to the resume page of this site"
-									className="transition hover:bg-blue-600 duration-500 bg-teal-400
-									text-white dark:text-slate-800 px-4 py-2 rounded-md ml-8"
-									href="/resume"
-								>
-									<span>Resume</span>
-								</a>
+								<DownloadResumeButton />
 							</li>
 						</ul>
 					</nav>
@@ -123,10 +116,7 @@ export default function Home() {
 							/>
 						</a>
 					</div>
-					<animated.div
-						className="max-w-lg mx-auto"
-						style={{ ...headshotSpring }}
-					>
+					<animated.div className="max-w-lg mx-auto" style={{ ...headshotSpring }}>
 						<Image
 							className="h-auto max-w-full mx-auto rounded-full"
 							src={headshot}
@@ -137,27 +127,27 @@ export default function Home() {
 				<section id="description">
 					<SlideInText>
 						<div className="text-center py-10">
-								<h2
-									tabIndex={0}
-									className="text-5xl py-1 transition duration-500 dark:text-white"
+							<h2
+								tabIndex={0}
+								className="text-5xl py-1 transition duration-500 dark:text-white"
+							>
+								Services I offer
+							</h2>
+							<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
+								As a full stack developer, I will provide a{" "}
+								<span className="text-teal-400">beautiful</span> front end design
+								using cutting edge technologies like{" "}
+								<a
+									aria-label="A link to open react.dev in a new tab"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="transition underline decoration-sky-500 hover:decoration-rose-500"
+									href="https://react.dev/"
 								>
-									Services I offer
-								</h2>
-								<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
-									As a full stack developer, I will provide a{" "}
-									<span className="text-teal-400">beautiful</span> front end
-									design using cutting edge technologies like{" "}
-									<a
-										aria-label="A link to open react.dev in a new tab"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="transition underline decoration-sky-500 hover:decoration-rose-500"
-										href="https://react.dev/"
-									>
-										React.js
-									</a>
-									.
-								</p>
+									React.js
+								</a>
+								.
+							</p>
 						</div>
 						<div className="lg:flex gap-10">
 							<div
@@ -171,20 +161,18 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-xl py-4 text-teal-400">
-									Built How You Want
-								</h3>
+								<h3 className="text-xl py-4 text-teal-400">Built How You Want</h3>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 									Always communicating, the agile development style I use allows
-									for quick bursts of development. New builds can be finished
-									and presented to you and you can tell me what additional
-									features and changes you want to see in the next build.
+									for quick bursts of development. New builds can be finished and
+									presented to you and you can tell me what additional features
+									and changes you want to see in the next build.
 								</p>
 								<h4 className="text-xl py-4 text-teal-400">Preview Sites</h4>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									I will always have a preview site for you to see the progress
-									of your site. This allows you to see the progress and make
-									changes while I am developing!
+									I will always have a preview site for you to see the progress of
+									your site. This allows you to see the progress and make changes
+									while I am developing!
 								</p>
 							</div>
 							<div
@@ -198,19 +186,15 @@ export default function Home() {
 									width={100}
 									height={100}
 								/>
-								<h3 className="text-xl py-4 text-teal-400">
-									Beautiful Designs
-								</h3>
+								<h3 className="text-xl py-4 text-teal-400">Beautiful Designs</h3>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 									Designs feel personal to your brand and image. Made to look
 									unique, stand out, and be memorable.
 								</p>
-								<h4 className="text-xl py-4 text-teal-400">
-									Optimized for Mobile
-								</h4>
+								<h4 className="text-xl py-4 text-teal-400">Optimized for Mobile</h4>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Rest assured, your site will be responsive and look great on
-									all devices and screens.
+									Rest assured, your site will be responsive and look great on all
+									devices and screens.
 								</p>
 							</div>
 							<div
@@ -229,19 +213,19 @@ export default function Home() {
 								</h3>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 									Your website will be version controlled using GitHub deployed
-									with Vercel. This allows for seamless deployments, meaning
-									your site will never be down. Version control means your site
-									can have multiple versions and a preview version to audit
-									before releasing to the main branch.
+									with Vercel. This allows for seamless deployments, meaning your
+									site will never be down. Version control means your site can
+									have multiple versions and a preview version to audit before
+									releasing to the main branch.
 								</p>
 								<h4 className="text-xl py-4 text-teal-400">
 									Full Stack Development
 								</h4>
 								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 									ReactJS is the most popular JavaScript framework and it&apos;s
-									what the website you are seeing now is built with. Coupled
-									with TailwindCSS and NextJS, the limit of what your design can
-									look like is limitless.
+									what the website you are seeing now is built with. Coupled with
+									TailwindCSS and NextJS, the limit of what your design can look
+									like is limitless.
 								</p>
 							</div>
 						</div>
@@ -278,9 +262,7 @@ export default function Home() {
 									tabIndex={0}
 									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
 								>
-									<h3 className="text-3xl py-4 text-teal-400">
-										Premium Package
-									</h3>
+									<h3 className="text-3xl py-4 text-teal-400">Premium Package</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 										Ideal for individuals or small businesses looking for a
 										professionally designed web presence.
@@ -300,9 +282,7 @@ export default function Home() {
 									tabIndex={0}
 									className="text-center shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
 								>
-									<h3 className="text-3xl py-4 text-teal-400">
-										Custom Package
-									</h3>
+									<h3 className="text-3xl py-4 text-teal-400">Custom Package</h3>
 									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
 										Not sure which package is right for you, or need something
 										more specialized?
