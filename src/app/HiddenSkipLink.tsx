@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useSpring, animated } from '@react-spring/web';
+import { useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 interface Props {
-	text: string,
-	linkTo: string,
+	text: string;
+	linkTo: string;
 }
 
 export default function HiddenSkipLink({ text, linkTo }: Props) {
@@ -14,12 +14,14 @@ export default function HiddenSkipLink({ text, linkTo }: Props) {
 		reverse: !isFocused,
 	});
 
-	return(
+	return (
 		<animated.div
 			className="max-w-lg mx-auto text-teal-400"
 			style={{ ...spring }}
 			onFocus={() => setIsFocused(true)}
 			onBlur={() => setIsFocused(false)}
+			onMouseEnter={() => setIsFocused(true)}
+			onMouseLeave={() => setIsFocused(false)}
 		>
 			<a href={linkTo}>{text}</a>
 		</animated.div>
