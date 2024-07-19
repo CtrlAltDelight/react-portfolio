@@ -189,7 +189,7 @@ export default function Home() {
 								<p>
 									I am excited to start my professional journey and am actively
 									looking for opportunities to apply my skills and make a positive
-									impact. Feel free to reach out if you'd like to connect or
+									impact. Feel free to reach out if you would like to connect or
 									discuss potential opportunities!
 								</p>
 							</div>
