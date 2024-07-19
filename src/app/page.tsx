@@ -134,9 +134,9 @@ export default function Home() {
 						</h2>
 						<SlideInText>
 							<div className="font-semibold indent-8 text-left space-y-4 py-2 leading-8 text-gray-800 duration-500 dark:text-white">
-								<p>Hi, I'm Luke Chigges!</p>
+								<p>Hi, I&apos;m Luke Chigges!</p>
 								<p>
-									I'm a recent Computer Engineering graduate from Purdue
+									I&apos;m a recent Computer Engineering graduate from Purdue
 									University, where I developed a strong foundation in software
 									engineering and a passion for creating innovative solutions.
 								</p>
@@ -176,18 +176,18 @@ export default function Home() {
 									Microcontrollers and where I contributed to the development of
 									firmware using React and STM32 Bluetooth Low Energy
 									communications. Some of the key technologies I work with include
-									JavaScript, Python, React, and Node.js. I'm particularly
-									interested in web development and computer networks and I'm
+									JavaScript, Python, React, and Node.js. I&apos;m particularly
+									interested in web development and computer networks and I am
 									eager to continue learning and growing in this field.
 								</p>
 								<p>
-									When I'm not coding, you can find me configuring my Linux
+									When I&apos;m not coding, you can find me configuring my Linux
 									desktop, playing bass guitar, or making personal sites like the
-									one you are on now. I'm also passionate about teaching and
+									one you are on now. I am also passionate about teaching and
 									tutoring programming.
 								</p>
 								<p>
-									I'm excited to start my professional journey and am actively
+									I am excited to start my professional journey and am actively
 									looking for opportunities to apply my skills and make a positive
 									impact. Feel free to reach out if you'd like to connect or
 									discuss potential opportunities!
