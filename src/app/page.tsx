@@ -47,8 +47,10 @@ export default function Home() {
 				<link rel="icon" type="image/png" href="../../consulting.png" />
 				<link rel="canonical" href="https://www.chigges.com" />
 			</Head>
-			<nav className="fixed w-full top-0 left-0 transition duration-500 bg-gradient-to-b from-slate-950 from-5% to-slate-800 px-10 md:px-20 lg:px-40 py-6 flex justify-between">
-				<h2 className="text-xl font-mono duration-500 text-white">Luke Chigges</h2>
+			<nav className="fixed w-full top-0 left-0 transition duration-500 bg-gradient-to-b from-gray-600 dark:from-slate-950 from-5% to-white dark:to-slate-800 dark:bg-slate-800 px-10 md:px-20 lg:px-40 py-6 flex justify-between">
+				<h2 className="text-xl font-mono duration-500 text-black dark:text-white">
+					Luke Chigges
+				</h2>
 				<ul className="flex items-center">
 					<li>
 						<BsFillMoonStarsFill
@@ -69,7 +71,7 @@ export default function Home() {
 			<div className="pt-16 transition-all duration-500 bg-white px-10 md:px-20 lg:px-96 dark:bg-slate-800 dark:text-white text-lg">
 				<main>
 					<section className="max-h-screen mb-24 sm:mb-8">
-						<div className="flex flex-row">
+						<div className="flex flex-row mt-12 sm:mt-1">
 							{/* TODO: Add a skip link to each section */}
 							<HiddenSkipLink text="Skip to About Me" linkTo="#aboutme" />
 							<HiddenSkipLink text="Skip to Skills & Education" linkTo="#skills" />
@@ -345,7 +347,7 @@ export default function Home() {
 					</section>
 				</main>
 			</div>
-			<footer className="h-28 bg-gradient-to-b from-slate-800 to-slate-950" />
+			<footer className="transition-all duration-500 h-28 bg-gradient-to-t from-gray-600 dark:from-slate-950 from-5% to-white dark:to-slate-800 dark:bg-slate-800" />
 		</div>
 	);
 }
