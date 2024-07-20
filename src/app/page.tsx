@@ -39,302 +39,313 @@ export default function Home() {
 	return (
 		<div className={darkMode ? "dark" : ""}>
 			<Head>
-				<title>Chigges Web Design</title>
-				<meta name="description" content="Chigges Web Design and Development" />
-				<link rel="icon" type="image/png" href="../../public/code.png" />
+				<title>Luke Chigges</title>
+				<meta
+					name="description"
+					content="Landing page for Software Engineer Luke Chigges."
+				/>
+				<link rel="icon" type="image/png" href="../../consulting.png" />
+				<link rel="canonical" href="https://www.chigges.com" />
 			</Head>
-			<main className="transition duration-500 bg-white px-10 md:px-20 lg:px-40 dark:bg-slate-800">
-				<section className="min-h-screen">
-					<nav className="py-10 mb-12 flex justify-between">
-						<h2 className="text-xl font-mono transition duration-500 dark:text-white">
-							Luke Chigges
-						</h2>
-						<ul className="flex items-center">
-							<li>
-								<BsFillMoonStarsFill
-									tabIndex={0}
-									onClick={() => setDarkMode(!darkMode)}
-									onKeyDown={(e) => {
-										if (e.key === "Enter" || e.key === "Space")
-											setDarkMode(!darkMode);
-									}}
-									className="transition ease-in-out hover:text-yellow-500 dark:hover:text-yellow-500 hover:scale-110 cursor-pointer text-2xl dark:text-white"
-								/>
-							</li>
-							<li>
-								<DownloadResumeButton />
-							</li>
-						</ul>
-					</nav>
-					<div className="flex flex-row">
-						<HiddenSkipLink text="Skip to description" linkTo="#description" />
-						<HiddenSkipLink text="Skip to pricing" linkTo="#pricing" />
-						<HiddenSkipLink text="Skip to contact" linkTo="#contact" />
-					</div>
-
-					<div className="text-center p-10">
-						<h1 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
-							Luke Chigges
-						</h1>
-						<h2 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
-							Developer and designer.
-						</h2>
-						<p className="py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto transition duration-500 dark:text-white">
-							Freelancer providing web services.
-						</p>
-					</div>
-					<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label="Open a link to Luke's github.com profile in a new tab"
-							href="https://github.com/CtrlAltDelight/"
-						>
-							<AiFillGithub
-								role="none"
-								className="transition hover:scale-110 hover:fill-teal-500 text-gray-600 dark:text-white"
-							/>
-						</a>
-						<a
-							target="_blank"
-							rel="noopener"
-							aria-label="Open a link to Luke's linkedin.com profile in a new tab"
-							href="https://www.linkedin.com/in/luke-chigges/"
-						>
-							<AiFillLinkedin
-								role="none"
-								className="transition hover:scale-110 hover:fill-blue-500 text-gray-600 dark:text-white"
-							/>
-						</a>
-						<a
-							aria-label="A link to send Luke an email"
-							href="mailto:webdev@chigges.com?subject=Let's make a website!"
-						>
-							<AiFillMail
-								role="none"
-								className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
-							/>
-						</a>
-					</div>
-					<animated.div className="max-w-lg mx-auto" style={{ ...headshotSpring }}>
-						<Image
-							className="h-auto max-w-full mx-auto rounded-full"
-							src={headshot}
-							alt="A picture of Luke Chigges"
+			<nav className="fixed w-full top-0 left-0 transition duration-500 bg-gradient-to-b from-slate-950 from-5% to-slate-800 px-10 md:px-20 lg:px-40 py-6 flex justify-between">
+				<h2 className="text-xl font-mono duration-500 text-white">Luke Chigges</h2>
+				<ul className="flex items-center">
+					<li>
+						<BsFillMoonStarsFill
+							tabIndex={0}
+							onClick={() => setDarkMode(!darkMode)}
+							onKeyDown={(e) => {
+								if (e.key === "Enter" || e.key === "Space") setDarkMode(!darkMode);
+							}}
+							className="ease-in-out hover:text-yellow-500 dark:hover:text-yellow-500 hover:scale-110 cursor-pointer text-2xl dark:text-white"
 						/>
-					</animated.div>
-				</section>
-				<section id="description">
-					<SlideInText>
-						<div className="text-center py-10">
-							<h2
-								tabIndex={0}
-								className="text-5xl py-1 transition duration-500 dark:text-white"
-							>
-								Services I offer
+					</li>
+					<li>
+						<DownloadResumeButton />
+					</li>
+				</ul>
+			</nav>
+
+			<div className="pt-16 transition-all duration-500 bg-white px-10 md:px-20 lg:px-96 dark:bg-slate-800 dark:text-white text-lg">
+				<main>
+					<section className="max-h-screen mb-8">
+						<div className="flex flex-row">
+							{/* TODO: Add a skip link to each section */}
+							<HiddenSkipLink text="Skip to description" linkTo="#description" />
+							<HiddenSkipLink text="Skip to pricing" linkTo="#pricing" />
+							<HiddenSkipLink text="Skip to contact" linkTo="#contact" />
+						</div>
+
+						<div className="text-center p-10">
+							<h1 className="text-5xl py-2 text-teal-400 font-medium md:text-6xl">
+								Luke Chigges
+							</h1>
+							<h2 className="text-md py-5 leading-8 text-gray-800 md:text-3xl transition duration-500 dark:text-white">
+								Software Engineer
 							</h2>
-							<p className="text-md py-2 leading-8 text-gray-800 transition duration-500 dark:text-white">
-								As a full stack developer, I will provide a{" "}
-								<span className="text-teal-400">beautiful</span> front end design
-								using cutting edge technologies like{" "}
-								<a
-									aria-label="A link to open react.dev in a new tab"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="transition underline decoration-sky-500 hover:decoration-rose-500"
-									href="https://react.dev/"
-								>
-									React.js
-								</a>
-								.
+							<p className="py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto transition duration-500 dark:text-white">
+								Detail-oriented full stack developer with a passion for creating.
 							</p>
 						</div>
-						<div className="xl:flex xl:columns-3 space-between gap-10">
-							<div
-								tabIndex={0}
-								className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+						<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Open a link to Luke's github.com profile in a new tab"
+								href="https://github.com/CtrlAltDelight/"
 							>
-								<Image
-									className="mx-auto"
-									src={consulting}
-									alt="A picture of a hand giving a thumbs up"
-									width={100}
-									height={100}
+								<AiFillGithub
+									role="none"
+									className="transition hover:scale-110 hover:fill-teal-500 text-gray-600 dark:text-white"
 								/>
-								<h3 className="text-xl py-4 text-teal-400">Built How You Want</h3>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Always communicating, the agile development style I use allows
-									for quick bursts of development. New builds can be finished and
-									presented to you and you can tell me what additional features
-									and changes you want to see in the next build.
-								</p>
-								<h4 className="text-xl py-4 text-teal-400">Preview Sites</h4>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									I will always have a preview site for you to see the progress of
-									your site. This allows you to see the progress and make changes
-									while I am developing!
-								</p>
-							</div>
-							<div
-								tabIndex={0}
-								className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50 width-"
+							</a>
+							<a
+								target="_blank"
+								rel="noopener"
+								aria-label="Open a link to Luke's linkedin.com profile in a new tab"
+								href="https://www.linkedin.com/in/luke-chigges/"
 							>
-								<Image
-									className="mx-auto"
-									src={design}
-									alt="A clip art representing an image icon"
-									width={100}
-									height={100}
+								<AiFillLinkedin
+									role="none"
+									className="transition hover:scale-110 hover:fill-blue-500 text-gray-600 dark:text-white"
 								/>
-								<h3 className="text-xl py-4 text-teal-400">Beautiful Designs</h3>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Designs feel personal to your brand and image. Made to look
-									unique, stand out, and be memorable.
-								</p>
-								<h4 className="text-xl py-4 text-teal-400">Optimized for Mobile</h4>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Rest assured, your site will be responsive and look great on all
-									devices and screens.
-								</p>
-							</div>
-							<div
-								tabIndex={0}
-								className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+							</a>
+							<a
+								aria-label="A link to send Luke an email"
+								href="mailto:site@chigges.com"
 							>
-								<Image
-									className="mx-auto"
-									src={code}
-									alt="An image of a hashtag"
-									width={100}
-									height={100}
+								<AiFillMail
+									role="none"
+									className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
 								/>
-								<h3 className="text-xl py-4 text-teal-400">
-									Industry Grade Deployment
-								</h3>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									Your website will be version controlled using GitHub deployed
-									with Vercel. This allows for seamless deployments, meaning your
-									site will never be down. Version control means your site can
-									have multiple versions and a preview version to audit before
-									releasing to the main branch.
-								</p>
-								<h4 className="text-xl py-4 text-teal-400">
-									Full Stack Development
-								</h4>
-								<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-									ReactJS is the most popular JavaScript framework and it&apos;s
-									what the website you are seeing now is built with. Coupled with
-									TailwindCSS and NextJS, the limit of what your design can look
-									like is limitless.
-								</p>
-							</div>
+							</a>
 						</div>
-					</SlideInText>
-				</section>
-				<section id="pricing">
+						<animated.div className="max-w-lg mx-auto" style={{ ...headshotSpring }}>
+							<Image
+								className="h-auto max-w-full mx-auto rounded-full"
+								src={headshot}
+								alt="A picture of Luke Chigges"
+							/>
+						</animated.div>
+					</section>
+					<section id="About Me" className="pb-12">
+						<h2 tabIndex={0} className="text-center text-5xl py-1 duration-500">
+							About Me
+						</h2>
+						<SlideInText>
+							<div className="font-semibold indent-8 text-left space-y-4 py-2 leading-8 text-gray-800 duration-500 dark:text-white">
+								<p>Hi, I&apos;m Luke Chigges!</p>
+								<p>
+									I&apos;m a recent Computer Engineering graduate from Purdue
+									University, where I developed a strong foundation in software
+									engineering and a passion for creating innovative solutions.
+								</p>
+								<p>
+									During my studies, I specialized in Software and Computer
+									Systems, gaining hands-on experience with various programming
+									languages, frameworks, and tools. Throughout my academic
+									journey, I worked on several exciting projects, including{" "}
+									<b>Sweat Social</b>: A fitness tracking iOS app, using Google
+									Firebase and Swift technologies. A web based tool for rating
+									Node packages using AWS Lambda, DynamoDB, and React. And my own
+									compiler for a C like language called Micro C.
+								</p>
+								<p>
+									In addition to my coursework, I completed internships at{" "}
+									<a
+										aria-label="A link to open Milwaukee Tool's website in a new tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="underline decoration-sky-500 hover:decoration-rose-500"
+										href="https://www.milwaukeetool.com/"
+									>
+										Milwaukee Tool
+									</a>{" "}
+									and{" "}
+									<a
+										aria-label="A link to open Newr Company's website in a new tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="underline decoration-sky-500 hover:decoration-rose-500"
+										href="https://www.newrcompany.com/"
+									>
+										Newr Company
+									</a>{" "}
+									, where I collaborated with cross-functional teams to design and
+									implement an automated PCB testing system using Python and
+									Microcontrollers and where I contributed to the development of
+									firmware using React and STM32 Bluetooth Low Energy
+									communications. Some of the key technologies I work with include
+									JavaScript, Python, React, and Node.js. I&apos;m particularly
+									interested in web development and computer networks and I am
+									eager to continue learning and growing in this field.
+								</p>
+								<p>
+									When I&apos;m not coding, you can find me configuring my Linux
+									desktop, playing bass guitar, or making personal sites like the
+									one you are on now. I am also passionate about teaching and
+									tutoring programming.
+								</p>
+								<p>
+									I am excited to start my professional journey and am actively
+									looking for opportunities to apply my skills and make a positive
+									impact. Feel free to reach out if you would like to connect or
+									discuss potential opportunities!
+								</p>
+							</div>
+						</SlideInText>
+					</section>
 					<SlideInText>
-						<div className="text-center justify-center py-10">
+						<section id="skills">
 							<h2
 								tabIndex={0}
-								className="text-5xl py-1 transition duration-500 dark:text-white"
+								className="text-center text-5xl py-1 duration-500 dark:text-white"
 							>
-								Pricing
+								Skills & Education
 							</h2>
 							<div className="xl:flex xl:columns-3 space-between gap-10">
 								<div
 									tabIndex={0}
-									className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+									className="transition duration-500 text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/50"
 								>
-									<h3 className="text-3xl py-4 text-teal-400">Basic Package</h3>
-									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-										Ideal for individuals or small businesses looking for a
-										professionally designed web presence.
+									<Image
+										className="mx-auto"
+										src={consulting}
+										alt="A picture of a hand giving a thumbs up"
+										width={100}
+										height={100}
+									/>
+									<h3 className="text-xl py-4 text-teal-400">
+										<strong>Front End</strong>
+									</h3>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<ul className="">
+											<li>React.js</li>
+											<li>Svelte</li>
+											<li>JavaScript</li>
+											<li>HTML</li>
+											<li>CSS</li>
+											<li>TailwindCSS</li>
+											<li>Bootstrap</li>
+										</ul>
 									</p>
 									<h4 className="text-xl py-4 text-teal-400">
-										<ul className="list-none text-sky-300">
-											<li>Custom Web Design</li>
-											<li>React-based Development</li>
-											<li>Fast Deployment</li>
-										</ul>
+										<strong>Back End</strong>
 									</h4>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<ul className="">
+											<li>Node.js</li>
+											<li>Flask</li>
+											<li>AWS</li>
+											<li>MongoDB</li>
+											<li>Google Firebase</li>
+											<li>JSON</li>
+											<li>SQL</li>
+										</ul>
+									</p>
 								</div>
 								<div
 									tabIndex={0}
-									className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+									className="transition duration-500 text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/50 width-"
 								>
-									<h3 className="text-3xl py-4 text-teal-400">Premium Package</h3>
-									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-										Ideal for individuals or small businesses looking for a
-										professionally designed web presence.
+									<Image
+										className="mx-auto"
+										src={design}
+										alt="A clip art representing an image icon"
+										width={100}
+										height={100}
+									/>
+									<h3 className="text-xl py-4 text-teal-400">
+										<strong>Code Management</strong>
+									</h3>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<ul className="">
+											<li>Git</li>
+											<li>GitHub</li>
+											<li>Docker</li>
+											<li>Kubernetes</li>
+											<li>Linux Environment</li>
+										</ul>
 									</p>
 									<h4 className="text-xl py-4 text-teal-400">
-										<ul className="list-none text-sky-300">
-											<li>Custom Web Design</li>
-											<li>React-based Development</li>
-											<li>Fast Deployment</li>
-											<li>Domain Management</li>
-											<li>Custom Email</li>
-											<li>Multiple Pages</li>
-										</ul>
+										<strong>Programming Languages</strong>
 									</h4>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<ul className="">
+											<li>C</li>
+											<li>Python</li>
+											<li>Bash</li>
+											<li>Java</li>
+											<li>TypeScript</li>
+											<li>Swift</li>
+										</ul>
+									</p>
 								</div>
 								<div
 									tabIndex={0}
-									className="text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 transition hover:shadow-xl hover:shadow-cyan-500/50"
+									className="transition duration-500 text-center w-full shadow-lg p-10 rounded-2xl my-10 shadow-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/50"
 								>
-									<h3 className="text-3xl py-4 text-teal-400">Custom Package</h3>
-									<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-										Not sure which package is right for you, or need something
-										more specialized?
-										<br />
-										Contact me to discuss a tailored solution for your needs.
+									<Image
+										className="mx-auto"
+										src={code}
+										alt="An image of a hashtag"
+										width={100}
+										height={100}
+									/>
+									<h3 className="text-xl py-4 text-teal-400">
+										<strong>Education</strong>
+									</h3>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<b className="text-teal-400">B.S. Computer Engineering</b>,
+										Purdue University,
+										<br /> West Lafayette
 									</p>
-									<div className="text-5xl flex justify-center gap-16 py-3 transition duration-500">
-										<a
-											aria-label="A link to send Luke an email"
-											href="mailto:webdev@chigges.com?subject=Let's make a website!"
-										>
-											<AiFillMail
-												role="none"
-												className="transition hover:scale-110 hover:fill-red-500 text-gray-600 dark:text-white"
-											/>
-										</a>
-									</div>
-									<div className="text-lg text-center pb-20 text-gray-800 transition duration-500 dark:text-white">
-										<a
-											href="mailto:webdev@chigges.com?subject=Let's make a website!"
-											className="transition text-cyan-500 hover:text-cyan-300"
-										>
-											webdev@chigges.com
-										</a>
-									</div>
+									<p className="text-base py-1 text-gray-800 duration-500 dark:text-white">
+										Concentration in Software Engineering <br />
+										Concentration in Computer Systems
+									</p>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<b className="text-teal-400">Certificate in React.js</b>,
+										Purdue University,
+										<br /> West Lafayette
+									</p>
+									<h4 className="text-xl py-4 text-teal-400">
+										<strong>Experience</strong>
+									</h4>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<b>Milwaukee Tool</b>, Engineering Intern, Milwaukee WI
+									</p>
+									<p className="py-1 text-gray-800 duration-500 dark:text-white">
+										<b>Newr Company</b>, Engineering Intern, Greenfield IN
+									</p>
 								</div>
 							</div>
-						</div>
+						</section>
 					</SlideInText>
-				</section>
-				<section id="contact">
-					<div className="text-center">
-						<h3
-							tabIndex={0}
-							className="justify-between align-center text-3xl py-1 transition duration-500 dark:text-white"
-						>
-							Contact
-						</h3>
-						<p className="py-1 text-gray-800 transition duration-500 dark:text-white">
-							Send me an email and I will get back to you as soon as possible.
-						</p>
-					</div>
-					<div className="text-center pb-20 text-gray-800 transition duration-500 dark:text-white">
-						<a
-							className="transition text-cyan-500 hover:text-cyan-300"
-							href="mailto:webdev@chigges.com?subject=Let's make a website!"
-						>
-							<p>webdev@chigges.com</p>
-						</a>
-					</div>
-				</section>
-			</main>
+					<section id="contact">
+						<div className="text-center">
+							<h2
+								tabIndex={0}
+								className="text-center text-5xl py-1 duration-500 dark:text-white pb-2"
+							>
+								Contact
+							</h2>
+							<p className="py-1 text-gray-800 duration-500 dark:text-white">
+								Send me an email and I will get back to you as soon as possible.
+							</p>
+						</div>
+						<div className="text-center pb-20 text-gray-800 duration-500 dark:text-white">
+							<a
+								className="text-cyan-500 hover:text-cyan-300"
+								href="mailto:site@chigges.com"
+							>
+								<p>site@chigges.com</p>
+							</a>
+						</div>
+					</section>
+				</main>
+			</div>
+			<footer className="h-28 bg-gradient-to-b from-slate-800 to-slate-950" />
 		</div>
 	);
 }
