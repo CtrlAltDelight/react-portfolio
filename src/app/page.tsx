@@ -68,12 +68,12 @@ export default function Home() {
 
 			<div className="pt-16 transition-all duration-500 bg-white px-10 md:px-20 lg:px-96 dark:bg-slate-800 dark:text-white text-lg">
 				<main>
-					<section className="max-h-screen mb-8">
+					<section className="max-h-screen mb-24 sm:mb-8">
 						<div className="flex flex-row">
 							{/* TODO: Add a skip link to each section */}
-							<HiddenSkipLink text="Skip to description" linkTo="#description" />
-							<HiddenSkipLink text="Skip to pricing" linkTo="#pricing" />
-							<HiddenSkipLink text="Skip to contact" linkTo="#contact" />
+							<HiddenSkipLink text="Skip to About Me" linkTo="#aboutme" />
+							<HiddenSkipLink text="Skip to Skills & Education" linkTo="#skills" />
+							<HiddenSkipLink text="Skip to Contact" linkTo="#contact" />
 						</div>
 
 						<div className="text-center p-10">
@@ -128,7 +128,7 @@ export default function Home() {
 							/>
 						</animated.div>
 					</section>
-					<section id="About Me" className="pb-12">
+					<section id="aboutme" className="pb-12">
 						<h2 tabIndex={0} className="text-center text-5xl py-1 duration-500">
 							About Me
 						</h2>
@@ -170,7 +170,7 @@ export default function Home() {
 										href="https://www.newrcompany.com/"
 									>
 										Newr Company
-									</a>{" "}
+									</a>
 									, where I collaborated with cross-functional teams to design and
 									implement an automated PCB testing system using Python and
 									Microcontrollers and where I contributed to the development of
