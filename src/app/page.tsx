@@ -237,6 +237,7 @@ export default function Home() {
 									<p className="py-1 text-gray-800 duration-500 dark:text-white">
 										<ul className="">
 											<li>Node.js</li>
+											<li>Next.js</li>
 											<li>Flask</li>
 											<li>AWS</li>
 											<li>MongoDB</li>
